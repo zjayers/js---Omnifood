@@ -27,7 +27,46 @@
   }
 
   .main-nav {
+    float: left;
     display: none;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .main-nav li {
+    display: block;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 20px 0;
+    font-size: 100%;
+    font-weight: 300;
+  }
+
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+
+  /* Sticky Navigation */
+
+  .sticky-nav .main-nav {
+    margin-top: 10px;
+  }
+
+  .sticky-nav .main-nav li a:link,
+  .sticky-nav .main-nav li a:visited {
+    padding: 10px 0;
+  }
+
+  .sticky-nav .mobile-nav-icon {
+    margin-top: 10px;
+  }
+
+  .sticky-nav .mobile-nav-icon i {
+    color: #555;
   }
 
   .long-copy {
@@ -79,10 +118,10 @@
   }
 
   .logo {
-    height: 150px;
+    height: 50px;
     width: auto;
-    float: none;
-    margin-top: 100px;
+    float: left;
+    margin: 25px 0px;
   }
 }
 
