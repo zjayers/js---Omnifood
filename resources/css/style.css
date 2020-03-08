@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   background-color: #fff;
   color: #555;
@@ -15,6 +19,21 @@ html {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------*/
+/* FLOAT ClEARING */
+/*-------------------------------------*/
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 /* ------------------------------------*/
@@ -79,7 +98,23 @@ h3 {
 }
 
 .section-features .long-copy {
-	  margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+/* Generic Links */
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
 }
 
 /* ------------------------------------*/
@@ -92,6 +127,7 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .header-floating-text {
@@ -143,7 +179,8 @@ header {
 /*-------------------------------------*/
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -153,7 +190,8 @@ header {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
   background-color: #e67e22;
   border: 1px solid #e67e22;
   color: #fff;
@@ -167,7 +205,9 @@ header {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
   background-color: #cf6d17;
 }
 
@@ -202,42 +242,344 @@ header {
   margin-bottom: 10px;
 }
 
-
 /* ------------------------------------*/
 /* MEALS SECTION */
 /*-------------------------------------*/
 
 .section-meals {
-	padding: 0;
+  padding: 0;
 }
 
 .meals-showcase {
-	list-style: none;
-	width: 100%
+  list-style: none;
+  width: 100%;
 }
 
 .meals-showcase li {
-	display: block;
-	float: left;
-	width: 25%;
+  display: block;
+  float: left;
+  width: 25%;
 }
 
 .meal-photo {
-	width: 100%;
-	margin:0;
-	overflow:hidden;
-	background-color: #000;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
 }
 
 .meal-photo img {
-	opacity: 0.6;
-	width: 100%;
-	height: auto;
-	transform: scale(1.3);
-	transition:transform 0.5s, opacity 0.5s;
+  opacity: 0.6;
+  width: 100%;
+  height: auto;
+  transform: scale(1.3);
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
-	opacity: 1;
-	transform: scale(1.05);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ------------------------------------*/
+/* HOW IT WORKS */
+/*-------------------------------------*/
+
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.step-col:first-child {
+  margin-top: 30px;
+  text-align: right;
+  padding-right: 3%;
+}
+
+.step-col:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.iphone-screen {
+  width: 40%;
+}
+
+.omni-step {
+  margin-bottom: 50px;
+}
+
+.omni-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 7px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.omni-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: none;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* ------------------------------------*/
+/* CITIES */
+/*-------------------------------------*/
+
+.city-col {
+}
+
+.city-col img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+
+  /* Align Text & Icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -6px;
+}
+
+/* ------------------------------------*/
+/* CUSTOMER TESTIMONIALS */
+/*-------------------------------------*/
+
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/back-customers.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+.section-testimonials blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.section-testimonials blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.section-testimonials cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+.section-testimonials cite img {
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ------------------------------------*/
+/* PRICING PLANS */
+/*-------------------------------------*/
+
+.section-pricing {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #d2d2d2;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border-bottom: none;
+}
+
+.plan-price {
+  font-size: 300%;
+  font-weight: 100;
+  margin-bottom: 10px;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 40%;
+  font-weight: 300;
+}
+
+.price-per-meal {
+  font-size: 80%;
+}
+
+/* ------------------------------------*/
+/* SUBMIT FORM */
+/*-------------------------------------*/
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.section-contact div h2 {
+  margin-bottom: 60px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  height: 30px
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=checkbox] {
+  margin: 15px 5px 15px 0px
+}
+
+/* ------------------------------------*/
+/* FOOTER */
+/*-------------------------------------*/
+
+footer {
+  background-color: #333;
+  padding: 15px;
+  font-size: 80%;
+}
+
+.footer-nav,
+.social-links {
+  list-style: none;
+}
+
+.footer-nav li,
+.social-links li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+  margin-right: 0;
+}
+
+.footer-nav {
+  float: left;
+}
+
+.social-links {
+  float:right;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+  color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 150%
+}
+
+.ion-social-twitter,
+.ion-social-facebook,
+.ion-social-instagram,
+.ion-social-googleplus {
+ transition: color 0.2s;
+}
+
+.ion-social-twitter:hover {
+  color: #00aced;
+}
+
+.ion-social-facebook:hover {
+color: #3b5998;
+}
+
+.ion-social-instagram:hover {
+color: #a451a1;
+}
+
+.ion-social-googleplus:hover {
+color: #dd4b39;
+}
+
+footer p {
+  margin-top: 30px;
+  color: #888;
+  text-align: center;
+  font-size: 90%
 }
