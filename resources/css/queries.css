@@ -1,0 +1,144 @@
+/* Small Phones - 0-480px */
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* Large Phones - Tablets - 481-767px */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+  section {
+    padding: 30px 0;
+  }
+  .row,
+  .header-floating-text {
+    padding: 0 4%;
+  }
+
+  .col {
+    width: 100%;
+    margin: 0% 0% 4% 0%;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .long-copy {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 180%;
+    text-align: center;
+  }
+  h2 {
+    font-size: 120%;
+    font-weight: 300;
+  }
+  h3 {
+    font-size: 100%;
+  }
+
+  .omni-step {
+    margin-bottom: 20px;
+  }
+  .omni-step:last-child {
+    margin-bottom: 20px;
+  }
+
+  .step-col:first-child {
+    text-align: center;
+  }
+
+  .iphone-screen {
+    display: none;
+  }
+
+  .omni-step div {
+    height: 40px;
+    width: 40px;
+    padding: 3px;
+    margin-right: 15px;
+    font-size: 120%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .logo {
+    height: 150px;
+    width: auto;
+    float: none;
+    margin-top: 100px;
+  }
+}
+
+/* Large Phones - Tablets - Landscape Mode - 768-1023px */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .long-copy {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .step-col {
+    margin-top: 18px;
+  }
+  .step-col:last-child {
+    margin-top: 18px;
+  }
+  .omni-step {
+    margin-bottom: 40px;
+  }
+  .omni-step:last-child {
+    margin-bottom: 40px;
+  }
+
+  .iphone-screen {
+    width: 50%;
+  }
+
+  .icon-small {
+    width: 17px;
+    margin-right: 5px;
+  }
+  .city-feature {
+    font-size: 90%;
+  }
+
+  .plan-box {
+    width: 100%;
+    margin-left: 0%;
+    font-size: 80%;
+  }
+}
+
+/* Desktop Computer Screens - 1023-1200px */
+@media only screen and (max-width: 1200px) {
+  .header-floating-text {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  .row {
+    padding: 0 2%;
+  }
+}
