@@ -128,10 +128,16 @@ a:active {
 /*-------------------------------------*/
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
-    url(img/hero.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(img/hero-min.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/hero.jpg);
+    url(img/hero-min.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -225,7 +231,7 @@ header {
 /* MOBILE NAVIFATION */
 
 .mobile-nav-icon {
-  float:right;
+  float: right;
   margin-top: 30px;
   margin-right: 20px;
   cursor: pointer;
@@ -442,10 +448,16 @@ input[type="submit"]:active {
 /*-------------------------------------*/
 
 .section-testimonials {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))),
-    url(img/back-customers.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    url(img/back-customers-min.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(img/back-customers.jpg);
+    url(img/back-customers-min.jpg);
   background-size: cover;
   color: #fff;
   background-attachment: fixed;
@@ -666,12 +678,12 @@ footer p {
 .js--wp-cities {
   opacity: 0;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .js--wp-plan {
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .js--wp-features.animated,
