@@ -1,0 +1,29 @@
+{
+  "name": "js---Omnifood",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "homepage": "https://zjayers.github.io/js---Omnifood/",
+  "bugs": {
+    "url": "https://github.com/zjayers/js---Omnifood/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjayers/js---Omnifood.git"
+  },
+  "license": "MIT",
+  "author": "Zach Ayers",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-paged -d .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=12.18.3",
+    "npm": ">=6.14.7"
+  }
+}

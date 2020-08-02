@@ -1,33 +1,33 @@
 // JQuery Code Implementation
-$(document).ready(function() {
+$(document).ready(function () {
   //Waypoints to show sticky navigation
   $(".js--section-features").waypoint({
-    handler: function(direction) {
+    handler: function (direction) {
       if (direction == "down") {
         $("nav").addClass("sticky-nav");
       } else {
         $("nav").removeClass("sticky-nav");
       }
     },
-    offset: "60px;"
+    offset: "60px;",
   });
 
   const scrollSpeed = 1000;
 
   // Scroll on button clicks
-  $(".js--scroll-to-plans").click(function() {
+  $(".js--scroll-to-plans").click(function () {
     $("html, body").animate(
       {
-        scrollTop: $(".js--section-pricing").offset().top
+        scrollTop: $(".js--section-pricing").offset().top,
       },
       scrollSpeed
     );
   });
 
-  $(".js--scroll-to-start").click(function() {
+  $(".js--scroll-to-start").click(function () {
     $("html, body").animate(
       {
-        scrollTop: $(".js--section-features").offset().top
+        scrollTop: $(".js--section-features").offset().top,
       },
       scrollSpeed
     );
@@ -39,7 +39,7 @@ $(document).ready(function() {
     // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
-    .click(function(event) {
+    .click(function (event) {
       // On-page links
       if (
         location.pathname.replace(/^\//, "") ==
@@ -57,10 +57,10 @@ $(document).ready(function() {
           event.preventDefault();
           $("html, body").animate(
             {
-              scrollTop: target.offset().top
+              scrollTop: target.offset().top,
             },
             scrollSpeed,
-            function() {
+            function () {
               // Callback after animation
               // Must change focus!
               var $target = $(target);
@@ -80,36 +80,36 @@ $(document).ready(function() {
 
   // Animations On Scroll
   $(".js--wp-features").waypoint({
-    handler: function() {
+    handler: function () {
       $(".js--wp-features").addClass("animated fadeIn");
     },
-    offset: "50%;"
+    offset: "50%;",
   });
 
   $(".js--wp-phone").waypoint({
-    handler: function() {
+    handler: function () {
       $(".js--wp-phone").addClass("animated fadeInUp");
     },
-    offset: "50%;"
+    offset: "50%;",
   });
 
   $(".js--wp-cities").waypoint({
-    handler: function() {
+    handler: function () {
       $(".js--wp-cities").addClass("animated fadeIn");
     },
-    offset: "50%;"
+    offset: "50%;",
   });
 
   $(".js--wp-plan").waypoint({
-    handler: function() {
+    handler: function () {
       $(".js--wp-plan").addClass("animated tada");
     },
-    offset: "50%;"
+    offset: "50%;",
   });
 
   // Mobile Navigation
 
-  $(".js--mobile-icon").click(function(e) {
+  $(".js--mobile-icon").click(function (e) {
     e.preventDefault();
     const nav = $(".js--main-nav");
     const icon = $(".js--mobile-icon i");
