@@ -15,7 +15,7 @@
   "author": "Zach Ayers",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-paged -d .",
+    "deploy": "gh-pages -d .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {},
